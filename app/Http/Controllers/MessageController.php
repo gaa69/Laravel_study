@@ -8,12 +8,11 @@ use App\Models\Message;
 
 class MessageController extends Controller
 {
-    //
     public function index():View
     {
         // メッセージテーブルのレコードを全件取得
-        $messages = Messages::all();
+        $messages = Message::all();
         // messagesというキーで、ビューへ渡す
-        return view('messages/index',['messages'=>$messages]);
+        return view('message/index',['messages'=>$messages]);
     }
 }
